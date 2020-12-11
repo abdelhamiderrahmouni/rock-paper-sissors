@@ -1,0 +1,260 @@
+
+
+body{
+  color: #343434;
+}
+
+button{
+  font-size: 1rem;
+}
+
+#gameContainer{
+  text-align: center;
+  width: 450px;
+  height: 620px;
+  background-color: #FFEA06;
+  border: 2px solid #343434;
+}
+
+#welcomeUI{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #FFEA06;
+  display: flex;
+  flex-direction: column;
+}
+
+#welcomeUI img{
+  width: 100%;
+  height: 35%;
+}
+
+#welcomeUI h2{
+  width: 70%;
+  margin: 4% 17%;
+  font-size: 1.8em;
+}
+
+#welcomeUI input, #welcomeUI button{
+  padding: 5%;
+  width: 50%;
+  margin: 4% 20%;
+  text-align: center;
+  color: #343434;
+  border: 0px;
+  border-bottom: 2px solid #343434;
+  background-color: inherit;
+  border-radius: 10px;
+
+}
+
+#welcomeUI button{
+  margin: 10px 24%;
+  border: 2px solid #343434;
+  font-weight: bolder;
+
+}
+
+/***************************************/
+#welcomeMsg{
+  text-align: center;
+  width: 85%;
+  height: 75%;
+  background-color: #FFEA06;
+  display: flex;
+  flex-direction: column;
+  padding-top: 25%;
+  padding-left: 15%;
+}
+
+#welcomeMsg h3, #welcomeMsg h4, #welcomeMsg h1, #welcomeMsg h2{
+  max-width: 80%;
+  text-align: center;
+  height: 10%;
+}
+
+
+
+/***************************************/
+
+#playGroundUI{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #FFEA06;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#playersInfo{
+  height: 10%;
+  display: flex;
+  color: #343434;
+  font-size: 1em;
+}
+
+#playersInfo div{
+  width: 100%;
+}
+
+#vs{
+  flex-basis: 20%;
+}
+
+.player{
+  display: flex;
+  border-bottom: 2px solid #343434;
+  flex-basis: 40%;
+}
+
+.player img{
+  margin: 5%;
+  width: 35%;
+  border-radius: 50%;
+  border: 2px solid #343434;
+}
+
+.info{
+  width: 70%;
+  height: 100%;
+  margin: 0;
+}
+
+.info h3, .info h4{
+  width: 95%;
+  margin: 12% 0;
+  text-align: left;
+  padding: 0 5%;
+}
+
+#resaults{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#playersChoices{
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+#playerSide, #oponentSide{
+  width: 50%;
+  height: 100%;
+}
+
+#playerChoiceDisplay, #oponentChoiceDisplay{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: translateX(75px);
+  font-size: 3.8rem;
+}
+
+#resaultSection{
+  width: 100%;
+  height: 20%;
+  font-size: 1.8rem;
+}
+
+#choices{
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#choices button{
+  width: 20%;
+  margin: 2% 0;
+  border-radius: 50%;
+  border: 2px solid #343434;
+  background-color: inherit;
+  font-weight: bold;
+  color: #343434;
+  font-size: 3rem;
+}
+
+#gameOverMsg{
+  width: 100%;
+  height: 78%;
+  background-color: #FFEA06;
+}
+
+#gameOverMsg h2, #gameOverMsg h1{
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+#gameOverMsg h2{
+  margin-top: 30%;
+}
+
+#gameOverMsg button{
+  padding: 5%;
+  width: 50%;
+  height: 5%;
+  margin: 5% 24%;
+  text-align: center;
+  font-weight: bold;
+  color: #343434;
+  border: 2px solid #343434;
+  background-color: inherit;
+  border-radius: 10px;
+}
+
+@media (max-width: 450px) {
+  #gameContainer{
+    width: 94vw;
+    height: 150vw;
+    
+  }
+  button{
+    font-size: 1rem;
+  }
+  
+  #playersInfo{
+      height: 12%;
+  }
+  
+  #choices{
+      height: 15%;
+  }
+
+}
+
+@media (max-width: 350px) {
+  #gameContainer{
+    
+    font-size: 0.7rem;
+  }
+  button{
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 250px) {
+  #gameContainer{
+    
+    font-size: 0.5rem;
+  }
+  button{
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 150px) {
+  #gameContainer{
+   
+    font-size: 0.3rem;
+  }
+  button{
+    font-size: 0.3rem;
+  }
+}
