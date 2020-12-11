@@ -60,14 +60,17 @@ function buttonDisabled(a) {
 }
 
 var resaultRefreshRate = 900;
+var vibrationDuration = 80;
 
 function moveRock(){
+    
+    window.navigator.vibrate(vibrationDuration);
   resaultSection.innerText = "";
   // disable the clickability behavior of all the buttons after a press
   buttonDisabled(true);
   setTimeout(function(){
     buttonDisabled(false);
-}, 1500);
+}, resaultRefreshRate);
 
   var text = document.getElementById("playerChoiceDisplay");
   text.innerHTML = '<h3><i class="las la-fist-raised"></i></h3>';
@@ -80,6 +83,7 @@ function moveRock(){
 }
 
 function movePaper(){
+    window.navigator.vibrate(vibrationDuration);
   resaultSection.innerText = "";
 
   // disable the clickability behavior of all the buttons after a press
@@ -87,7 +91,7 @@ function movePaper(){
 
   setTimeout(function(){
     buttonDisabled(false);
-  }, 1500);
+  }, resaultRefreshRate);
 
   var text = document.getElementById("playerChoiceDisplay");
   text.innerHTML = '<h3><i class="las la-hand-paper"></i></h3>';
@@ -100,13 +104,14 @@ function movePaper(){
 }
 
 function moveScissors(){
+  window.navigator.vibrate(vibrationDuration);
   resaultSection.innerText = "";
 
   // disable the clickability behavior of all the buttons after a press
   buttonDisabled(true);
   setTimeout(function(){
     buttonDisabled(false);
-  }, 1500);
+  }, resaultRefreshRate);
 
   var text = document.getElementById("playerChoiceDisplay");
   text.innerHTML = '<h3><i class="las la-hand-scissors"></i></h3>';
@@ -119,56 +124,50 @@ function moveScissors(){
 }
 
 var frameSpeed = 13;
+var f = 0.02;
 
 function move(){
   var element = document.getElementById("playerChoiceDisplay");
-  var pos = 250;
+  var po = 0;
   var opac = 0;
   var id = setInterval(frame, frameSpeed);
   function frame(){
-    if(pos >= 540){
+    if(po >= 2){
       clearInterval(id);
-    }else{
-      pos+=3;
-      element.style.bottom = pos + "px";
+      opac = 0;
+      po = 0;
+    }else if(po <= 1){
+      opac += f;
+      po += f;
       element.style.opacity = opac;
-      if(pos <= 310) {
-        opac += 0.02;
-      }
-      else if (pos <= 430) {
-        opac += 0.03;
-        pos+=0.03;
-      }else{
-        pos+=2;
-        opac -= 0.1;
-      }
-    }
+     }else if(po > 1){
+        opac -= f;
+        po += f;
+        element.style.opacity = opac;
+     }
   }
 }
 
 function moveTwo(){
   var element = document.getElementById("oponentChoiceDisplay");
-  var pos = 30;
+  var po = 0;
   var opac = 0;
   var id = setInterval(frame, frameSpeed);
   function frame(){
-    if(pos >= 350){
+    if(po >= 2){
       clearInterval(id);
-    }else{
-      pos+=3;
-      element.style.top = pos + "px";
+      opac = 0;
+      po = 0;
+    }else if(po <= 1){
+      opac += f;
+      po += f;
       element.style.opacity = opac;
-      if(pos <= 80) {
-        opac += 0.02;
-      }
-      else if (pos <= 220) {
-        opac += 0.03;
-        pos+=0.03;
-      }else{
-        pos+=2;
-        opac -= 0.07;
-      }
-    }
+     }else if(po > 1){
+        opac -= f;
+        po += f;
+        element.style.opacity = opac;
+     }
+    
   }
 }
 
@@ -202,6 +201,7 @@ function updateScore(s){
     playerScoreInt = parseInt(playerScore.textContent, 10);
     playerScoreInt++;
     playerScore.innerText = playerScoreInt;
+    
     if(playerScoreInt === 10){
       gameOver(0);
     }
