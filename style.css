@@ -89,7 +89,7 @@ button{
 }
 
 #playersInfo{
-  height: 10%;
+  height: 14%;
   display: flex;
   color: #343434;
   font-size: 1em;
@@ -136,7 +136,7 @@ button{
 }
 
 #resaults{
-  height: 70%;
+  height: 65%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -170,7 +170,7 @@ button{
 }
 
 #choices{
-  height: 20%;
+  height: 18%;
   display: flex;
   justify-content: space-around;
 }

@@ -202,7 +202,7 @@ function updateScore(s){
     playerScoreInt++;
     playerScore.innerText = playerScoreInt;
     
-    if(playerScoreInt === 10){
+    if(playerScoreInt === 3){
       gameOver(0);
     }
   }else if(s === 1){
@@ -210,7 +210,7 @@ function updateScore(s){
     oponentScoreInt = parseInt(oponentScore.textContent, 10);
     oponentScoreInt++;
     oponentScore.innerText = oponentScoreInt;
-    if (oponentScoreInt === 10) {
+    if (oponentScoreInt === 3) {
       gameOver(1);
     }
   }
