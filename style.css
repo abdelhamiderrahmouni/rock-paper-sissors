@@ -27,7 +27,7 @@ button{
 
 #welcomeUI img{
   width: 100%;
-  height: 35%;
+  height: 40%;
 }
 
 #welcomeUI h2{
@@ -36,21 +36,20 @@ button{
   font-size: 1.8em;
 }
 
-#welcomeUI input, #welcomeUI button{
-  padding: 5%;
-  width: 50%;
-  margin: 4% 20%;
-  text-align: center;
-  color: #343434;
-  border: 0px;
-  border-bottom: 2px solid #343434;
-  background-color: inherit;
-  border-radius: 10px;
-
+#welcomeUI input, button {
+    height: 10%;
+    width: 50%;
+    margin: 4% 25%;
+    text-align: center;
+    color: #343434;
+    border: 2px solid #343434;
+    background-color: inherit;
+    border-radius: 10px;
+    font-size: 1.3rem;
 }
 
 #welcomeUI button{
-  margin: 10px 24%;
+  margin: 2% 26%;
   border: 2px solid #343434;
   font-weight: bolder;
 
@@ -74,6 +73,9 @@ button{
   height: 10%;
 }
 
+#welcomeMsg h1{
+    font-size: 1.4;
+}
 
 
 /***************************************/
@@ -101,6 +103,10 @@ button{
 
 #vs{
   flex-basis: 20%;
+}
+
+#vs h3{
+    margin: 9%;
 }
 
 .player{
@@ -176,6 +182,7 @@ button{
 }
 
 #choices button{
+    height: 80%;
   width: 20%;
   margin: 2% 0;
   border-radius: 50%;
@@ -201,18 +208,18 @@ button{
   width: 100%;
   height: 10%;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 2%;
 }
 
 #gameOverMsg h2{
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 #gameOverMsg button{
-  padding: 5%;
-  width: 50%;
-  height: 5%;
-  margin: 5% 24%;
+  padding: 0;
+  width: 70%;
+  height: 15%;
+  margin: 5% 14%;
   text-align: center;
   font-weight: bold;
   color: #343434;

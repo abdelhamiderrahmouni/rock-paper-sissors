@@ -1,94 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Let's play | Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    
-  </head>
-  <body>
+
+</head>
+
+<body>
     <div id="gameContainer">
-      <div id="welcomeUI" >
-        <img src="ressources/rock_paper_scissors.png" alt="rock-paper-scissors">
-        <h2>Hello there! <br />
-        Let's get to know you:</h2>
-        <input type="text" id="playerNameInput" name="playerNameInput" placeholder="Tell us your Name">
-        <button class="WelcomeButtons" name="playWithUsButton" onclick="play()">Let's Play</button>
-        <!--<button type="WelcomeButtons" name="playWithFriendsButton">Play With Your Friends!</button>-->
-      </div>
+        <div id="welcomeUI">
+            <img src="ressources/rock_paper_scissors.png" alt="rock-paper-scissors">
+            <h2>Hello there! <br />
+                Let's get to know you:</h2>
+            <input type="text" id="playerNameInput" name="playerNameInput" placeholder="Tell us your Name">
+            <button class="WelcomeButtons" name="playWithUsButton" onclick="play()">Let's Play</button>
+            <!--<button type="WelcomeButtons" name="playWithFriendsButton">Play With Your Friends!</button>-->
+        </div>
 
-      <div id="welcomeMsg" style="display:none;">
-        <h2>Welcome</h2>
-        <h1 id="playerNameDisplay">Abdel hamid</h1>
-        <h3>Let's see who scores 10 points first!</h3>
-        <h3>Go Go Go</h3>
-        <h1>emoji</h1>
-      </div>
+        <div id="welcomeMsg" style="display:none;">
+            <h2>Welcome</h2>
+            <h1 id="playerNameDisplay">Abdel hamid</h1>
+            <h3>Let's see who scores 3 points first!</h3>
+            <h3>Go Go Go</h3>
+            <h1>🤠</h1>
+        </div>
 
-      <!-- playGroundUI Start -->
+        <!-- playGroundUI Start -->
 
-      <div id="playGroundUI" style="display:none;">
-        <section id="playersInfo">
-          <div class="player">
-            <img src="ressources/player.jpg" alt="profile-image">
-            <div class="info">
-              <h3 id="playerName">Unknown</h3>
-              <h4>Score: <span id="playerScore">0</span></h4>
-            </div>
-          </div>
+        <div id="playGroundUI" style="display:none;">
+            <section id="playersInfo">
+                <div class="player">
+                    <img src="ressources/player.jpg" alt="profile-image">
+                    <div class="info">
+                        <h3 id="playerName">Unknown</h3>
+                        <h4>Score: <span id="playerRounds">0</span></h4>
+                    </div>
+                </div>
 
-          <div id="vs">
-            <h2>VS</h2>
-          </div>
+                <div id="vs">
+                    <h3>Round<br><span id="round">1</span></h3>
+                    <h3><span id='playerScore'>0</span> : <span id="oponentScore">0</span></h3>
+                </div>
 
-          <div class="player oponent">
-            <div class="info">
-              <h3 id="oponentName">hamid</h3>
-              <h4>Score: <span id="oponentScore">0</span></h4>
-            </div>
-            <img src="ressources/oponent.png" alt="profile-image">
+                <div class="player oponent">
+                    <div class="info">
+                        <h3 id="oponentName">hamid</h3>
+                        <h4>Score: <span id="oponentRounds">0</span></h4>
+                    </div>
+                    <img src="ressources/oponent.png" alt="profile-image">
 
-          </div>
-        </section>
+                </div>
+            </section>
 
-        <section id="resaults">
-          <div id="playersChoices">
-            <div id="playerSide">
-              <div id="playerChoiceDisplay">
-                <!-- Add sketch representing the choice -->
-              </div>
+            <section id="resaults">
+                <div id="playersChoices">
+                    <div id="playerSide">
+                        <div id="playerChoiceDisplay">
+                            <!-- Add sketch representing the choice -->
+                        </div>
 
-            </div>
+                    </div>
 
-            <div id="oponentSide">
-              <div id="oponentChoiceDisplay" >
-                <!-- Add sketch representing the choice -->
-              </div>
+                    <div id="oponentSide">
+                        <div id="oponentChoiceDisplay">
+                            <!-- Add sketch representing the choice -->
+                        </div>
 
-            </div>
-          </div>
-          <div id="resaultSection">
-            <h1 id="resault"></h1>
-          </div>
-        </section>
+                    </div>
+                </div>
+                <div id="resaultSection">
+                    <h1 id="resault"></h1>
+                </div>
+            </section>
 
-        <section id="choices">
-          <button id="rockButton" type="button" name="button" onclick="moveRock()"><i class="las la-fist-raised"></i></button>
-          <button id="paperButton" type="button" name="button" onclick="movePaper()"><i class="las la-hand-paper"></i></button>
-          <button id="scissorsButton" type="button" name="button" onclick="moveScissors()"><i class="las la-hand-scissors"></i></button>
-        </section>
-      </div>
+            <section id="choices">
+                <button id="rockButton" type="button" name="button" onclick="moveRock()"><i class="las la-fist-raised"></i></button>
+                <button id="paperButton" type="button" name="button" onclick="movePaper()"><i class="las la-hand-paper"></i></button>
+                <button id="scissorsButton" type="button" name="button" onclick="moveScissors()"><i class="las la-hand-scissors"></i></button>
+            </section>
+        </div>
 
-      <div id="gameOverMsg" style="display:none;">
-        <h2>Game Over</h2>
-        <h1 id="whoWins"></h1>
-        <button type="button" name="button" onclick="playAgain()">Let's play Again!</button>
-      </div>
+        <div id="gameOverMsg" style="display:none;">
+            <h2>Game Over</h2>
+            <h1 id="whoWins"></h1>
+            <h3>But it's</h3>
+            <h1><span id="playerRoundsDisplay">0</span> to <span id="oponentRoundsDisplay">0</span></h1>
+            <button type="button" name="button" onclick="playAgain()">Let's play Another Round!</button>
+        </div>
     </div>
     <script type="text/javascript" src="script.js">
 
     </script>
-  </body>
+</body>
+
 </html>
