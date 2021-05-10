@@ -91,14 +91,14 @@ button{
 }
 
 #playersInfo{
-  height: 14%;
+  height: 12%;
   display: flex;
   color: #343434;
   font-size: 1em;
 }
 
 #playersInfo div{
-  width: 100%;
+  width: 80%;
 }
 
 #vs{
@@ -136,7 +136,7 @@ button{
 
 .info h3, .info h4{
   width: 95%;
-  margin: 12% 0;
+  margin: 8% 0;
   text-align: left;
   padding: 0 5%;
 }
