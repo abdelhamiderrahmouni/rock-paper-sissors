@@ -182,10 +182,10 @@ function showResault(a, b) {
     if (a === b) {
         resaultSection.innerText = "It's a Draw 😂";
     } else if (a === 0 && b === 1) {
-        resaultSection.innerText = "You Win 🥳";
+        resaultSection.innerText = "I win 😜";
         updateScore(0);
     } else if (a === 0 && b === 2) {
-        resaultSection.innerText = "I win 😜";
+        resaultSection.innerText = "You Win 🤩";
         updateScore(1);
     } else if (a === 1 && b === 0) {
         resaultSection.innerText = "You Win 🤩";
